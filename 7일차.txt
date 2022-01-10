@@ -186,7 +186,7 @@ select
  from emp as sawon           --부하 테이블
  inner join emp as boss      --상사 테이블
  on sawon.mgr = boss.empno
-
+.
 
 
 
