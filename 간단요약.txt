@@ -1,0 +1,24 @@
+ifnull(comm, 숫자) null에 숫자 만큼을 부여 하여 출력
+where 컬럼 is null      null출력               ex)보너스가 없는 사람출력
+where 컬럼 is not null  null을 출력하지 않는다. ex)보너스가 있는 사람출력
+
+date_format(hidedate, '%Y') > 숫자  입사날짜가 1982년에 입사 where date_format(hidedate, '%Y') > 1982
+
+from emp as e                           --emp 테이블 별칭 e
+inner join dept as d                    --dept 테이블 별칭 d
+on e.deptno = d.deptno                  --emp 테이블과 dept 테이블  컬럼 deptno를 교집합
+inner join emp as boss                  --emp 테이블 끼리를 셀프 조인 별칭 boss
+on e.mgr = boss.empno                   --mgr 컬럼과 empno컬럼을 교집합
+
+사원명, 사수번호, 사수 이름을 출력
+   단, 사수가 없는 사원도 포함
+select
+ sawon.ename as '사원명',               
+ sawon.empno as '사수번호',
+ boss.ename as '사수이름'
+from emp as sawon                      --emp 테이블 별칭 sawon 
+left join emp as boss                  --emp 테이블 별칭 boss
+on sawon.mgr = boss.empno              --emp 테이블 에서  컬럼 sawon.mgr과 컬럼boss.empno 를 묶다
+
+사수가 없는 사원도포함 <-- ~가 없는 ~도 포함일경우 outer(left, right)조인을 사용
+
