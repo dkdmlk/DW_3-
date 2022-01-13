@@ -15,7 +15,7 @@
 		} // int x 는 for문 가로에서 사망   //x는 if문이 성립하기떄문에 4
         } // int y 는 16번제 main 중가로에서 사망
 
-        디버깅 = 표를 보여줌
+        디버깅 = 표를 보여줌 run - > debug as -> f5눌러서 표 순서출력 f6정답출력
 
         //2번문제 답
 		//1. 1부터 100까지(반복문)
@@ -45,6 +45,97 @@
 			}
 		}
 	}    
+
+        int sum = 0;
+        for (int i=1; i<=10; ++i) {				   //sum의 값은 0이고 i의 값을 1~10까지 증가
+			sum = sum+i;				           //    sum    |   i          //디버깅
+		}                                                 0         1 
+                                                          1         2
+                                                          3         3
+                                                          6         4 ... 증가
+                                                          55
+        1.지역변수 / 전역변수
+        지역 변수는 항상 전역변수랑 비교 (누가더 오래 사는지)
+
+        2.반복문
+         공통점 : 무언가를 반복해서 작업함.
+         차이점 : for 문은 제한된 조건이 옴
+                  while 문은 무한으로 실행 break문 걸어서 탈출!
+         2-1. for 
+         2-2. while
+
+
+         int count = 0;
+		while(true) {              //Iot 통신할떄 사용하는 문법
+			++count;
+			if(count == 3){        //카운트가 3일떄
+				break;             //탈출
+			}
+		}
+
+        //1. for 2번문제 카운트가 30 break
+		//2.for 문 2번 문제에서 1~10까지 합구하기 55오면 브레이크
+		int count = 0;
+		int i = 0;	
+		while (true) {
+			i = ++i;
+			if((i % 2) == 0) {
+				++count;
+				if(count == 30 ) {
+					break;
+				}
+			}			
+		}
+		System.out.println("30에서 멈춰 -> " + count);
+		
+		int sum = 0;
+		while (true) {
+			i = ++i;
+			sum = sum + i;
+			if (sum == 55 ) {
+				break;
+			}
+			
+		}
+		System.out.println("55에서 멈춰 -> " + sum);
+
+
+        변수이름은 소문자,대문자를 입력.
+        소문자 변수는 값이 변경 가능하다는걸 의미
+        ex)String name = "철수"
+        대문자 변수는 값이 불가능 (상수값) 
+        ex) final double PI = 3.14
+        ex) String NAME_ACTOR = "박서준"
+
+        2중for문 순서
+        for(int i =0; i<10; ++i) {
+			
+            for(int j=0; j<10; ++j) {           //2중포문
+				
+			}
+		}
+        1 int i=0; -> i<1; ->2중포문 -> 2중포문 int j =0 -> j<10 -> ++j -> ++i ->반복 2중for문은 총 20번실행
+        1번재 for문이 맞을떄까지 안에 있는 포문을 실행!!!!
+        for(int i =0; i<2; ++i) {
+			System.out.println("***점심***");
+            for(int j=0; j<5; ++j) {
+				System.out.println("저녁");              //출력: ***점심***저녁저녁저녁저녁저녁***점심***저녁저녁저녁저녁저녁
+			}
+		}                                             
+
+        for(int i =2; i<= 9; ++i) {        	
+			System.out.println(i+ "단은?");                          //2로 시작 하여 9번반복
+            for(int j=1; j<= 9; ++j) {                              //2중for문 1부터 시작하여 9번반복
+			System.out.println( i + " x "+ j+ " = "  + (i * j));    // i와 j 의 값 = i * j 출력  ex)2단 2x1 2x2 ...2x9 ++i 와 ++j하여 실행 2단 2x1...2x9 3단 3x1...3x9 ... 9단 9x1 ...9x9 까지 출력
+			}
+		}
+
+        --자바 끝 --
+        1.if/else, for ,while ,배열 (반복문친구)
+        2. 클래스, 메소드 **자바특징
+        3.제네릭 컬렉션 *****
+
+
 
 
 
