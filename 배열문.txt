@@ -85,3 +85,20 @@
 		//5. 아래 배열을 선언하고 정렬하시오. (풀 수 있는사람만)
 		//int array[] = {5,11,2,0,7}; 
 		//ex) {5,11,2,0,7} -> {0,2,5,7,11}
+
+        int array05[] = {5,11,2,0,7};
+	    int temp = 0;
+	    for(int i=1; i<array05.length; i++) {
+	        for(int j=0; j<array05.length-1; j++) {
+	            if(array05[j] > array05[i]) {          //버블정렬
+	                temp = array05[i];
+	                array05[i] = array05[j];
+	                array05[j] = temp;
+	            }
+	        }
+	    }
+
+	    
+	    for(int x : array05) {                          //출력
+	    	System.out.print(x+" ");                    //{0 2 5 7 11}
+	    }
