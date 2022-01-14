@@ -134,7 +134,7 @@
         1.if/else, for ,while ,배열 (반복문친구)
         2. 클래스, 메소드 **자바특징
         3.제네릭 컬렉션 *****
-
+        System.out.print = 프린트 출력    System.out.println = 엔터기능 트린트 출력
         방법1)
         for (int i = 9; i>=0; --i)(반대로 사용 가능)
         방법2
