@@ -23,7 +23,7 @@ on sawon.mgr = boss.empno              --emp 테이블 에서  컬럼 sawon.mgr�
 
 사수가 없는 사원도포함 <-- ~가 없는 ~도 포함일경우 outer(left, right)조인을 사용
 
---자바 끝 --
+        --자바 끝 --
         1.if/else, for ,while ,배열 (반복문친구)
         2. 클래스, 메소드 **자바특징
         3.제네릭 컬렉션 *****
