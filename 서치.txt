@@ -1,0 +1,10 @@
+public static void main(String[] args) {		
+		Scanner scan = new Scanner(System.in); //ctrl + shift +o 
+		System.out.println("이름을 입렵하세요 ==>");
+		String name = scan.next();
+		System.out.println("좋아하는 숫자를 입렵하세요 ==>");
+		int num = scan.nextInt();
+		
+		System.out.println("안녕하세요 제이름은 "+name+" 입니다.");
+		System.out.println("제가 좋아하는 숫자는 " +num+" 입니다." );
+	}
