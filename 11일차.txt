@@ -1,0 +1,44 @@
+        --자바--(객체지향언어)
+        1. if/else, for ,while ,배열 (공통)
+        2. 클래스, 메소드 **자바특징 (객체지향언어 특징)
+           (python, JavaScript, c++) 
+        3. 제네릭 컬렉션 (자바 특징)
+
+        문자 class타입은 주소를 비교 
+        String는 데이터타입이 class 에 따로보관됨
+        String == 은 비교하고자 하는 두개의 대상의 주소(위치)값을 비교함.(*call by Reference)
+        equals는 비교하고자 하는 두개의 대상의 값 자체를 비교.(*call by value)
+        //자바는 데이터타입9개 일반 타입8개와 클래스 타입
+        String id = "USER_ID";
+		String password = "123";
+		String id_2 = new String("USER_ID");
+		//새로운 스트링에 생성
+		if(id.equals("USER_ID")) {
+			System.out.println("아이디가 맞습니다.");
+		}else {
+			System.out.println("아이디가 다릅니다.");
+		}
+		
+		if(password.equals("123")) {
+			System.out.println("패스워드 가 맞습니다.");
+		}else {
+			System.out.println("패스워드 가 다릅니다.");
+		}
+
+        //배열
+        무의미한 값을 방지하기 위한 
+        //배열
+		int array[] = {2,4,6,9};
+		System.out.println(array[1]);//첫번째 배열(인덱스) 호출
+		System.out.println(array.length);//배열 길이 호출
+        System.out.println(array[4]);//에러
+        // array[0] = 10;//배열 0번째 인덱스 10으로 대입
+        for(int i=0; i<array.length; ++i) { //array의 길이 호출 (array에 있는값갯수)
+			System.out.println("배열에 있는 인덱스 값은 : " + array[i]); //array에 있는 숫자호출 i의값 0=2 ...i=3 의값=9
+		}
+
+        array[] = {5,11,2,0,7};                                           
+        for(int i : array) //int i 가 array싸지 성장                = for (int i=0; i<array.lenght; i++)
+        System.out.print(i+" ")                                       int x =array[i];
+        //5 11 2 0 7출력                                               System.out.print(x)
+        Array.sofy(array) //정렬끝
