@@ -1,0 +1,54 @@
+// 90점초과 A, 80점초과 B, 70점초과 C, 70점 이하는 F
+		// 조건, else if으로 풀것
+		int score = 88;
+		//적어도 최소 1개는 실행!!
+		if(score > 90 && score <=100) {
+			System.out.println("A");
+		}else if(score > 80 && score <= 90){
+			System.out.println("B");
+		}else if(score > 70 && score <= 80){
+			System.out.println("C");
+		}else {
+			System.out.println("F");
+		}
+
+        //1.if else러풀것
+		//2.변수선언은 한번만
+		//3. 사칙연산을 이용하여 풀것
+		//4. 사칙연상중에 %을 사용할것
+		int value = 100;
+		//짝수이지 홀수 인지 구별하는 프로그램 구혐!
+		
+		if(value % 2 == 0 )
+		{
+			System.out.println("짝수입니다.");
+		}	
+		else {
+			System.out.println("홀수 입니다.");
+		}
+
+
+        스캐너를 이용한 문제
+        Scanner scan = new Scanner(System.in);
+		System.out.println("숫자를 입렵하세요 ==>");
+		int value = scan.nextInt();
+		//문제 " 1 ~ 100 사이 숫자를 입력할것
+		//조건 : 100이 넘어가면 100이 넘었습니다 출력.
+		//조건 : 1~100 안에 있는 수자면 2의 배수인지 3의 배수인지 출력
+		//조건 : if/else 사용,사칙연산 사용, 변수는 value만
+		if((value - 100) >= 1) {
+			System.out.println("100이 넘었습니다");
+		}
+		if((value - 100) <= 1) {
+		 if(value % 2 == 0) {
+					System.out.println("2의 배수");
+				}
+		 if ((value % 2) !=0){
+					System.out.println("3의 배수");
+				}
+				}
+
+
+       
+
+
