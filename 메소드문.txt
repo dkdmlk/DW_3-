@@ -103,3 +103,13 @@
 			int 짝수 = getConunt(starNum값,endNum값);
 			System.out.println(짝수);
 		} 
+		
+		배열받는법
+		public static void main(String[] args){
+			int array[] = { 10,5,3,4};
+			배열받아보자(array);
+		}
+		public static이 int 배열받아보자(int[] array){
+			int x = array[0];
+			return 0;
+		}
