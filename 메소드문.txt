@@ -80,3 +80,26 @@
 			순대국밥(10,8,"길동")                  //순대양 : 10 내장양 : 8 손님이름 : 길동 출력
 			순대국밥(30,15,"철수")                 //순대양 : 30 내장양 : 15 손님이름 : 철수 출력
 		}
+
+	    //1부터 100까지 짝수 개수 구하기
+		//조건 1 starNum이 endNum보다 크면 return 0
+	    //조건 3 endNum이 100을 초과하면 return 0
+		public static int getConunt(int starNum, int endNum) {
+			int count = 0;
+			for(int i=starNum; i<=endNum;++i) {
+				if(i%2 ==0) {
+					++count;
+				}
+			}
+			if(starNum >= endNum) {
+				return 0;
+			}if(endNum > 100) {
+				return 0;
+			}
+			
+			return count;
+		}
+		public static void main(String[] args) {
+			int 짝수 = getConunt(starNum값,endNum값);
+			System.out.println(짝수);
+		}

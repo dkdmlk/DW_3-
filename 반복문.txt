@@ -4,6 +4,13 @@
 			if(i % 2 == 0)
 			System.out.println("i ==>"+i);
 		}
+		짝수 개수 구하기
+		int count = 0;
+			for(int i=starNum; i<=endNum;++i) {
+				if(i%2 ==0) {
+					++count;
+				}
+			}
 
         //파이널 문제 별찍기
 		//조건1 이중for문을 이용해서 아래와 같은 결과를 출력 할것!!!
