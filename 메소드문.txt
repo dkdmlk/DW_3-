@@ -83,7 +83,9 @@
 
 	    //1부터 100까지 짝수 개수 구하기
 		//조건 1 starNum이 endNum보다 크면 return 0
-	    //조건 3 endNum이 100을 초과하면 return 0
+	    //조건 2 endNum이 100을 초과하면 return 0
+	public static int getConunt(int starNum, int endNum) {
+		//필터링(if)을 먼저 하고 코드 실행
 		int count = 0;
 			if(starNum >= endNum) {
 				return 0;

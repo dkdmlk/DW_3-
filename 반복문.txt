@@ -6,7 +6,7 @@
 		}
 		짝수 개수 구하기 
 		int count = 0;
-			for(int i=starNum; i<=endNum;++i) {
+			for(int i=0; i<=100;++i) {
 				if(i%2 ==0) {
 					++count;
 				}
