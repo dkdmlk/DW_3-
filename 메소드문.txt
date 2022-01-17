@@ -71,3 +71,12 @@
         sum = 50;                      //sum의 핪을30에서 멈추고 sum값 50대입
 		return sum;
 -> break는 for문 까지만 return을쓰면 그값이 return {}에서 끝남.
+
+    //재사용성과 코드간결증가 (함수를 만들어놔 값을느면 그떄마다 사용가능.)
+    public static void 순대국밥(int 순대, int 내장,String 손님이름){
+		System.out.println("순대양 : " 순대 +"내장양 : "+ 내장 +"손님이름 : "+ 손님이름);
+	}
+	public static void main(String[] args) {
+			순대국밥(10,8,"길동")                  //순대양 : 10 내장양 : 8 손님이름 : 길동 출력
+			순대국밥(30,15,"철수")                 //순대양 : 30 내장양 : 15 손님이름 : 철수 출력
+		}
