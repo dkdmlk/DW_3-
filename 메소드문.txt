@@ -102,4 +102,4 @@
 		public static void main(String[] args) {
 			int 짝수 = getConunt(starNum값,endNum값);
 			System.out.println(짝수);
-		}
+		} 

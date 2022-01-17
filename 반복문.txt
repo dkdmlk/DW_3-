@@ -4,7 +4,7 @@
 			if(i % 2 == 0)
 			System.out.println("i ==>"+i);
 		}
-		짝수 개수 구하기
+		짝수 개수 구하기 
 		int count = 0;
 			for(int i=starNum; i<=endNum;++i) {
 				if(i%2 ==0) {

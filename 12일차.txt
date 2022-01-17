@@ -29,7 +29,7 @@ protected
   }  
 
   <접근지정자> <리턴타입> <메소드이름> <인수값>
-   public      int       
+   public      int        
    private     double
    protected   String
    default     ...
