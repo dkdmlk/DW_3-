@@ -84,19 +84,17 @@
 	    //1부터 100까지 짝수 개수 구하기
 		//조건 1 starNum이 endNum보다 크면 return 0
 	    //조건 3 endNum이 100을 초과하면 return 0
-		public static int getConunt(int starNum, int endNum) {
-			int count = 0;
-			for(int i=starNum; i<=endNum;++i) {
-				if(i%2 ==0) {
-					++count;
-				}
-			}
+		int count = 0;
 			if(starNum >= endNum) {
 				return 0;
 			}if(endNum > 100) {
 				return 0;
 			}
-			
+			for(int i=starNum; i<=endNum;++i) {
+				if(i%2 ==0) {
+					++count;
+				}
+			}
 			return count;
 		}
 		public static void main(String[] args) {
