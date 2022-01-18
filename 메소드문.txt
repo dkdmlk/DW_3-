@@ -85,23 +85,23 @@
 		//조건 1 starNum이 endNum보다 크면 return 0
 	    //조건 2 endNum이 100을 초과하면 return 0
 	public static int getConunt(int starNum, int endNum) {
-		//필터링(if)을 먼저 하고 코드 실행
-		int count = 0;
-			if(starNum >= endNum) {
+			//필터링이 먼저
+			int count = 0;                         //변수 count지정
+			if(starNum >= endNum) {                //변수starNum 가 endNum 크거나 같으면 0을 리턴
 				return 0;
-			}if(endNum > 100) {
+			}if(endNum > 100) {                    //endNum가 100초과이면 0을 리턴
 				return 0;
 			}
-			for(int i=starNum; i<=endNum;++i) {
-				if(i%2 ==0) {
+			for(int i=starNum; i<=endNum;++i) {    //스타트 넘버가i i가 엔드넘보다 작거나같을때 실행 조건에맞을떄까지 1을더함				                                   
+				if(i%2 ==0) {                      //i에 2를 나눈것이 0인 숫자이면 ++count
 					++count;
 				}
 			}
-			return count;
+			return count;                          //count를 리턴
 		}
 		public static void main(String[] args) {
-			int 짝수 = getConunt(starNum값,endNum값);
-			System.out.println(짝수);
+			int 짝수 = getConunt(1,100);            //getCount를 변수 짝수로 지정 ()의 인자값을 작성
+			System.out.println(짝수);               //출력
 		} 
 		
 		배열받는법
@@ -113,3 +113,76 @@
 			int x = array[0];
 			return 0;
 		}
+-------------------------------문제-----------------------------------------
+		//1. 메소드를 활용해서 짝수 출력( 1 ~ 10 )
+	//조건. 인자값 하고 리턴값이 없음.
+	//public static void 짝수판단(){
+		//...코드작성...
+	//}
+	public static void 짝수판단() { //void는 바로바로 프린트 출력가능
+		for(int i=0; i<=10; ++i) {
+		if(i% 2 == 0 ) {			
+			System.out.println(i);
+		}
+	}
+ }
+    public static void main(String[] args) {   	
+    	짝수판단();
+    	int array[] = {11,21,31,41};
+    	int max = 최대값구하기(array);
+    	System.out.println("가장큰값 : " + max);
+    	int temp =거스름돈구하기("만원", 50000);
+    	System.out.println(temp+"장 ");
+	}
+	
+
+	//2.메소드를 활용해서 최대값 구하기.
+	//조건. 인덱스 값이 50이 넘으면 최대값 비교를 하지 않습니다.
+	//조건. 배열길이가 5를 넘으면 return 0을 합니다. 
+	//public static int 최대값구하기(int[] array){
+		//int max = 0;
+		//...코드 작성...
+		//return max;
+	//}
+    public static int 최대값구하기(int[] array) {  //배열의 값을 인자값으로 정함
+    	if(array.length > 5) {                   //조건문은 가장먼저
+    		return 0;                            //배열의 길이가 5를넘으면 0을리턴
+    	}
+    	int max = 0;                             //int max 변수를 지정
+    	for(int i = 0;i < array.length; ++i) {   //배열의 길이만큼 ++i
+    		if(array[i] < 50) {                  //배열안의 숫자가 50보다크면 무시
+    			if(max < array[i]) {             //가장큰 배열의 숫자를 픽
+    				max = array[i];				 //max는 배열의 가장큰 숫자
+    			}    	
+        	}
+    }
+    	return max;
+    	
+    }
+
+	//3. 메소드를 활용해서 거스름돈 풀기.
+	//조건. 파라미터값에 만원을 입력하면 만원 몇장
+	 	//오천원을 입력하면 오천원 몇장을 출력.
+		//만원,오천원외 단어가 오면 0을 return 하시오
+	//public static int 최대값구하기(String money, int totalMoney){
+		//int MAN = 10000;
+		//int OCHEON = 5000;
+		//if(money.equals("만원")) ... 코드 작성 ...
+		//if(money.equals("오천원")) ... 코드 작성 ...
+	//}
+    public static int 거스름돈구하기(String money, int totalMoney){
+    	int MAN = 10000;                    //변수 MAN 10000
+    	int OCHEON = 5000;                  //변수 OCHEON 5000
+    	
+    	if(money.equals("만원")) {          //equals는 (==와같은으미)
+    		int manwon = totalMoney / 10000;//변수 manwon은 totalMoney / 10000
+    		return manwon;                  // mawon의 값을 리턴
+    	}
+    	if(money.equals("오천원")) {             //"오천원"일 경우
+    		int oocheonwon = totalMoney / 5000; //변수 ocheonwon 은 totalMoney / 5000
+    		return ocheonwon;                   //ocheonwon을 리턴
+    	}else {                                 //둘다아닐경우 
+    		return 0;                           //0을리턴
+    	}
+    	
+    }
