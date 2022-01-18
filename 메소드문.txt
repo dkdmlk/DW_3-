@@ -266,3 +266,33 @@ public class 클레스스터디 {
 			
 
 }
+----------------------문제------------------------------------------------
+//1. 조건이 들어간 최대 값 구하기
+	public static int getResult(String word) {
+		//1.콤마로 배열생성
+		//2.느낌표 제거할 것
+	  	//3.문자를 숫자로 변환 ex)int x = Integer.parseInt(String x)
+		//4.1000 미만 숫자 중 가장 큰 수 구하기
+		//최종 결과값에서 곱하기 2
+		String array[] = word.split(",");
+		int max = 0;
+		for(int i = 0; i < array.length; ++i) {			
+			word = array[i].replace("!", "");
+			int x = Integer.parseInt(word);
+			if(x < 1000) {
+				if(max < x ){
+					max = x;
+				}
+			}
+			
+		}
+    
+		
+		return max*2;
+	}
+		
+        public static void main(String[] args) {
+		String word = "101,1,10,1000,!100!,2000";
+		int id = getResult(word);
+		System.out.println(id);
+	}
