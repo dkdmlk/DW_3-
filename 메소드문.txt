@@ -287,8 +287,8 @@ public class 클레스스터디 {
 			
 		}
     
-		
-		return max*2;
+		max = max*2;
+		return max;
 	}
 		
         public static void main(String[] args) {
