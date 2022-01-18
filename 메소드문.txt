@@ -233,3 +233,36 @@ public class 문자메소드 {
 	}
 
 }
+
+public class 클레스스터디 {
+	//1. 메소드 생성
+	//public static String getResult(String id){
+		//...코드 작성...
+		//조건 1. 아이디 길이가 10이하, 2이상
+		//조건 2. 아이디를 대문자에서 소문자로 변경.
+		//조건 3. 아이디에 '!'가 들어가면 안됨.
+		//조건 4. 아이디에 문자 공백이 들어가면 안됨.
+
+		//return 문자열;
+	//}
+	public static String getResult(String id){
+		String 아이디 = id;               //변수 아이디에 id지정
+		int len = id.length();            //id의 길이조정
+		if(len <2 || len > 10) }          //길이가2이상 10이하
+			return "아이디는 2글자이상 10글자이로만 작성 가능합니다.";
+		}                                 //길이가 2이상 10이하시 리턴출력
+		아이디 = 아이디.toLowerCase();     //아이디 소문자화
+		아이디 = 아이디.replace(" ", "");  //아이디 공백제거
+		아이디 = 아이디.replace("!", "");  //아이디 !표 제거
+		return 아이디;                     //아이디를 리턴
+	}
+	
+	 // 2. 메인 메소드에서 getResult 호출
+	  public static void main(String[] args) { 
+	  String userID = "J a!va!";           //유저 아이디 "K a!va!"
+	  String id = getResult(userID);       //위의 메소드를 유저아이디에 대입
+	  System.out.println(id);              //java출력!
+    }
+			
+
+}
