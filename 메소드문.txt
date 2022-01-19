@@ -95,7 +95,7 @@
 			}
 			for(int i=starNum; i<=endNum;++i) {    //스타트 넘버가i i가 엔드넘보다 작거나같을때 실행 조건에맞을떄까지 1을더함				                                   
 				if(i%2 ==0) {                      //i에 2를 나눈것이 0인 숫자이면 ++count
-					++count;
+					++count;                       
 				}
 			}
 			return count;                          //count를 리턴
