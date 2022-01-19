@@ -70,3 +70,40 @@ public class 고객 {
 
 	}
 }
+//class는 객체(== Object)
+public class School {
+	int grade; //필드 변수(최강 전역 변수): 가장 오래 삶
+	
+	public void 등교하다() {
+		System.out.println("학학학학 학교를 갔어!");
+	}
+
+    public void 수업듣다() {
+		System.out.println("학학학학 학교에 수업을 들었어!");
+	}
+    
+    public void 수업시간에자다() {
+ 		System.out.println("학학학학 학교에서 잤어!");
+ 	}
+}
+
+package 메소드_3일차;
+
+public class 클래스호출 {
+	
+	public static School getSchool(School sch) {
+		sch.grade = 20;
+		sch.등교하다();
+		sch.수업듣다();
+		sch.수업시간에자다();
+		return sch;
+	}
+
+	public static void main(String[] args) {
+		School s = new School();//파일을 불러오기!		
+		s = getSchool(s);
+		System.out.println(s.grade);
+
+	}
+
+}
