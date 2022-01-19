@@ -35,7 +35,7 @@ public class Client {
 	}
 
 }
-
+-----------------------------------------------------------------------------------------
 public class Hamburger {
 	//1. 햄버거 클래스 생성
 	//*** 아래 메소드 생성 ***
@@ -70,6 +70,7 @@ public class 고객 {
 
 	}
 }
+---------------------------------------------------------------------------------------
 //class는 객체(== Object)
 public class School {
 	int grade; //필드 변수(최강 전역 변수): 가장 오래 삶
@@ -107,3 +108,30 @@ public class 클래스호출 {
 	}
 
 }
+------------------------------------------------------------------------------------
+public class School {
+	int age;
+	int score;
+	String name;
+	String teacher;
+	
+}
+
+public class 클래스호출 {
+	public static void test(School sch) {
+		sch.age = 10;
+		sch.score = 100;
+		sch.name = "홍길동";
+		sch.teacher = "김철수";
+		int x = sch.score;
+		System.out.println(x);
+	}
+
+	public static void main(String[] args) {
+		School sch = new School();//new를 통해서 School class파일 호출		
+		test(sch);                //스쿨 클래스 파일을 불러왔기 떄문에
+                                  //스쿨 클래스 파일에 있는 전역변수 사용가능
+	}
+
+}
+----------------------------------------------------------------------------------
