@@ -102,17 +102,18 @@
 		}
 		public static void main(String[] args) {
 			int 짝수 = getConunt(1,100);            //getCount를 변수 짝수로 지정 ()의 인자값을 작성
-			System.out.println(짝수);               //출력
+			System.out.println(짝수);               //출력 50 (1~100)까지의 짝수의 개수
 		} 
 		
 		배열받는법
 		public static void main(String[] args){
 			int array[] = { 10,5,3,4};
-			배열받아보자(array);
+			int y = 배열받아보자(array);
+			System.out.println(y);                   //밑의 x의 array[0]값인 10을출력
 		}
 		public static이 int 배열받아보자(int[] array){
 			int x = array[0];
-			return 0;
+			return x;
 		}
 -------------------------------문제-----------------------------------------
 		//1. 메소드를 활용해서 짝수 출력( 1 ~ 10 )
@@ -120,7 +121,7 @@
 	//public static void 짝수판단(){
 		//...코드작성...
 	//}
-	public static void 짝수판단() { //void는 바로바로 프린트 출력가능
+	public static void 짝수판단() {  //void는 바로바로 프린트 출력가능
 		for(int i=0; i<=10; ++i) {
 		if(i% 2 == 0 ) {			
 			System.out.println(i);
@@ -128,7 +129,7 @@
 	}
  }
     public static void main(String[] args) {   	
-    	짝수판단();
+    	짝수판단();                             //인자값이 없기떄문에 ()의 숫자를 넣지않고 위의 짝수판단()for문에따라 0~10의 짝수출력
     	int array[] = {11,21,31,41};
     	int max = 최대값구하기(array);
     	System.out.println("가장큰값 : " + max);
