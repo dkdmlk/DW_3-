@@ -9,9 +9,10 @@ public class Pizza {
 	public void 토핑을추가하다(String 토핑) {
 		System.out.println(토핑 + " 토핑 추가!");
 	}
-	public void 비법소스를첨가하다() {
+	private void 비법소스를첨가하다() {                                    //private는 해당 메소드에서만 출력
 		System.out.println("최고급 트러플 오일 듬뿍!");
 	}
+
 	
 }//캡슐화
 
@@ -20,18 +21,16 @@ public class Client {
 	public static void main(String[] args) {
 		//피자 객체(object) 호출
 		int x = 10;
-		Pizza 하와이안피자_치즈둠뿍 = new Pizza();
-		//하와이안 피자 제작 과정
-		//Pizza를 객체(==인스턴스)화 했다.
-		하와이안피자_치즈둠뿍.도우를만들다();
-		하와이안피자_치즈둠뿍.토핑을추가하다("버섯");
-		하와이안피자_치즈둠뿍.피자를굽다();
+		Pizza 하와이안피자_치즈둠뿍 = new Pizza();                           //하와이안 피자 제작 과정	//Pizza를 객체(==인스턴스)화 했다. 위의 Pizza클레스를 불러옴	
+		하와이안피자_치즈둠뿍.도우를만들다();                                 //도우 만드는 중~ 출력
+		하와이안피자_치즈둠뿍.토핑을추가하다("버섯");                          //버섯 토핑 추가! 출력
+		하와이안피자_치즈둠뿍.피자를굽다();                                   //피자 굽는 중~ 출력
 		//불고기피자 만드는 과정
-		Pizza 불고기피자 = new Pizza();
-		불고기피자.도우를만들다();
-		불고기피자.토핑을추가하다("소고기");
-		불고기피자.피자를굽다();
-		불고기피자.비법소스를첨가하다();
+		Pizza 불고기피자 = new Pizza();                                     //Pizza 클래스 호출(불고기 피자 만드는 과정)
+		불고기피자.도우를만들다();                                           //도우 만드는 중~ 출력
+		불고기피자.토핑을추가하다("소고기");                                  //소고기 토핑 추가! 출력
+		불고기피자.피자를굽다();                                             //피자 굽는 중~ 출력
+		불고기피자.비법소스를첨가하다();                                      //private 이기떄문에 출력x
 
 	}
 
@@ -48,10 +47,10 @@ public class Hamburger {
 		System.out.println("빵굽는중 ~ ");
 	}
 	public  String 패티추가하다(String 패티) {
-		return 패티;	
+		return 패티;	                                  //String 패티 값에 패티를 리턴
 	}
 	public  int 주문수량(int 주문수량) {
-		return 주문수량;
+		return 주문수량;                                  //int 주문수량에 주문수량을 리턴
 	}
 	
 	
@@ -63,9 +62,9 @@ public class 고객 {
 		//Pizza 하와이안피자_치즈둠뿍 = new Pizza();
 		Hamburger 불고기버거 = new Hamburger();
 		불고기버거.빵굽다();
-		String 패티 = 불고기버거.패티추가하다("불고기");
+		String 패티 = 불고기버거.패티추가하다("불고기");       //리턴값 패티 =불고기 대입 "불고기패티추가" 출력
 		System.out.println(패티 + " 패티 추가 ");
-		int 주문수량 = 불고기버거.주문수량(5);
+		int 주문수량 = 불고기버거.주문수량(5);                //리턴값 주문수랭 =5 대입 "5개 주문" 출력
 		System.out.println(주문수량 + " 개 주문");
 		
 
