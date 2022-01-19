@@ -128,16 +128,7 @@
 		}
 	}
  }
-    public static void main(String[] args) {   	
-    	짝수판단();                             //인자값이 없기떄문에 ()의 숫자를 넣지않고 위의 짝수판단()for문에따라 0~10의 짝수출력
-    	int array[] = {11,21,31,41};
-    	int max = 최대값구하기(array);
-    	System.out.println("가장큰값 : " + max);
-    	int temp =거스름돈구하기("만원", 50000);
-    	System.out.println(temp+"장 ");
-	}
-	
-
+    	
 	//2.메소드를 활용해서 최대값 구하기.
 	//조건. 인덱스 값이 50이 넘으면 최대값 비교를 하지 않습니다.
 	//조건. 배열길이가 5를 넘으면 return 0을 합니다. 
@@ -188,6 +179,16 @@
     	}
     	
     }
+	
+	//메인함수
+    public static void main(String[] args) {   	
+    	짝수판단();                             //인자값이 없기떄문에 ()의 숫자를 넣지않고 위의 짝수판단()for문에따라 0~10의 짝수출력
+    	int array[] = {11,21,31,41};
+    	int max = 최대값구하기(array);
+    	System.out.println("가장큰값 : " + max);
+    	int temp =거스름돈구하기("만원", 50000);
+    	System.out.println(temp+"장 ");
+	}
 ---------------------------------문자메소드-----------------------------------
 public class 문자메소드 {
 
