@@ -195,11 +195,11 @@ public class 문자메소드 {
 
 		//대문자->소문자
 		String result = "";
-		result = name.toLowerCase();   //toLowerCase 대문자를->소문자로
+		result = name.toLowerCase();                                  //toLowerCase 대문자를->소문자로
 		System.out.println(result);
 
 		//소문자 ->대문자
-		result = 소문자.toUpperCase(); //toUpperCase 소문자를 -> 대문자로
+		result = 소문자.toUpperCase();                                 //toUpperCase 소문자를 -> 대문자로
 		System.out.println(result);
 
 		//***** 띄어쓰기를 없애줌.
@@ -209,7 +209,7 @@ public class 문자메소드 {
 
 		//***** 중복되는 특수문자 로 나눠줌.
 		String phone = "010-1234-1234";
-		String array[] = phone.split("-"); // -를기준으로 출력
+		String array[] = phone.split("-");                              // -를 기준으로 나눠줌
 		System.out.println(array[2]); //뒤쪽1234출력
 
 		//글자수 ,글자수제한
@@ -222,13 +222,13 @@ public class 문자메소드 {
 
 		//****사용불가능한 문자 없애기
 		String password = "123@";
-		result = password.replace("@", "");//replace(바꾸고싶은 문자,바꾸자하는문자)
+		result = password.replace("@", "");                               //replace(바꾸고싶은 문자,바꾸자하는문자)
 		System.out.println(result);
 
 		//**** 안쪽에있는 띄어쓰기 없애기
 		String password2 = "123 123 123";
-		result = password2.replace(" ", ""); //공백을 없개대체
-		System.out.println(result);          //123123123출력
+		result = password2.replace(" ", "");                             //공백을 없개대체
+		System.out.println(result);                                      //123123123출력
 
 	}
 
@@ -274,25 +274,25 @@ public class 클레스스터디 {
 	  	//3.문자를 숫자로 변환 ex)int x = Integer.parseInt(String x)
 		//4.1000 미만 숫자 중 가장 큰 수 구하기
 		//최종 결과값에서 곱하기 2
-		String array[] = word.split(",");
-		int max = 0;
+		String array[] = word.split(",");             //String array[] 를 에대입 word.split(","); (word.split이 문자 배열을뜯함)
+		int max = 0;                                  //변수 max지정
 		for(int i = 0; i < array.length; ++i) {			
-			word = array[i].replace("!", "");
-			int x = Integer.parseInt(word);
-			if(x < 1000) {
-				if(max < x ){
-					max = x;
+			word = array[i].replace("!", "");         //word = array[i] 에 대입하고 replace로 !를 제거
+			int x = Integer.parseInt(word);           //Integer.parseInt(문자)는 문자를 숫자로 대입시켜줌 변수x에 word(array[i])를 대입
+			if(x < 1000) {                            //x(array[i])가 1000 미만일경우 (1000초과 숫자제외)
+				if(max < x ){                         //max 가 x보다작으면
+					max = x;                          //max 를 x에대입 (가장큰수)
 				}
 			}
 			
 		}
     
-		max = max*2;
-		return max;
+		max = max*2;                                 //max를 두배
+		return max;                                  //max를 리턴
 	}
 		
         public static void main(String[] args) {
-		String word = "101,1,10,1000,!100!,2000";
-		int id = getResult(word);
-		System.out.println(id);
+		String word = "101,1,10,1000,!100!,2000";   //스트링 word 배열을 지정 
+		int id = getResult(word);                   //변수id에 getResult식을 위의String word
+		System.out.println(id);                     //id 를출력 1000을제외한 숫자 101에*2하여 202출력
 	}
