@@ -53,12 +53,13 @@
     public static int getSum(int max) {
 		int sum =0;
 		for(int i=1; i<=max; ++i) {          
-			sum += i;
+			sum += i;                     //sum = sum+i
             for(sum == 30) {
                 return sum;               //이곳에서 return를종료
             }                        
 		}
-		return sum;
+		return sum;                       //무시
+
     ex)예시2
     public static int getSum(int max) {
 		int sum =0;
@@ -182,7 +183,7 @@
     		int oocheonwon = totalMoney / 5000; //변수 ocheonwon 은 totalMoney / 5000
     		return ocheonwon;                   //ocheonwon을 리턴
     	}else {                                 //둘다아닐경우 
-    		return 0;                           //0을리턴
+    		return 0;                           //0을리턴 ("만원","오천원"이 아닌경우"
     	}
     	
     }
@@ -233,7 +234,7 @@ public class 문자메소드 {
 	}
 
 }
-
+---------------------------------------------문자메소드문제---------------------------------------------
 public class 클레스스터디 {
 	//1. 메소드 생성
 	//public static String getResult(String id){
@@ -251,7 +252,7 @@ public class 클레스스터디 {
 		if(len <2 || len > 10) }          //길이가2이상 10이하
 			return "아이디는 2글자이상 10글자이로만 작성 가능합니다.";
 		}                                 //길이가 2이상 10이하시 리턴출력
-		아이디 = 아이디.toLowerCase();     //아이디 소문자화
+		아이디 = 아이디.toLowerCase();     //아이디 소문자화       변수아이디로 밑의 수정사항을 전부 저장(그대로 가지고옴) 첫아이디는 id그대로
 		아이디 = 아이디.replace(" ", "");  //아이디 공백제거
 		아이디 = 아이디.replace("!", "");  //아이디 !표 제거
 		return 아이디;                     //아이디를 리턴
@@ -266,7 +267,7 @@ public class 클레스스터디 {
 			
 
 }
-----------------------문제------------------------------------------------
+---------------------------------------------문자메소드문제---------------------------------------------
 //1. 조건이 들어간 최대 값 구하기
 	public static int getResult(String word) {
 		//1.콤마로 배열생성
