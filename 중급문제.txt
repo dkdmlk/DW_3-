@@ -207,3 +207,75 @@ public static void main(String[] args) {
 	        System.out.println(" addr : "+addr);
 	        System.out.print(" age : "+age);
 	    }
+        선생님 문제풀이 - 7번
+        String query = "name=brian&addr=daejeon&age=30";
+	        String name = "";
+	        String addr = "";
+	        String array[] = query.split("&");
+	        String query1;	        
+	        int age = 0;
+	        int len = 0;
+	        len = array.length;
+	        for(int i =0; i<len; ++i) {
+	        String temp[] = array[i].split("=");
+	        if(i == 0) {	        
+	        name = temp[i];
+	        }
+	        if(i==1) {	        
+	        addr = temp[i];
+	        }
+	        if(i==2) {	      
+	        int x = Integer.parseInt(temp[i-1]);
+	        age = x;}
+	        
+	        
+	        }
+        선생님 풀이6번
+        public static void main(String[] args) {
+        String scores = "80, 70, 100, 31";
+        String[] array = scores.split(",");
+        int len = array.length; //과목 수
+        
+        int sum = 0;
+        for(int i = 0; i <array.length; ++i) {
+        	String temp = array[i].trim();
+        	sum = Integer.parseInt(temp);
+        	sum = sum + Integer.parseInt(temp);
+        	
+        	if(sum == 100) {
+        		System.out.println("100점 만점에 100점!");
+        		
+        	}
+        }
+                                
+                                        
+        System.out.print("총점 : "+sum);
+        System.out.print("총점 : "+sum /len);
+	}
+
+    선생님 풀이 5번
+    public static void main(String[] args) {
+	        String phone = "017-404-1234";
+	        String array[] = phone.split("-");
+	        for(int i=0; i<array.length; ++i) {
+	        int len = array[i].length();
+	        if(i==0 && !array[i].equals("010")) {
+	        	System.out.println("핸드폰 번호를 변경해야 합니다.");
+	        	array[0] = "010-";
+	        }if(i > 0) {        	        
+	        if(len == 3) {
+	        	array[1]= "xxx-";
+	        }
+	        if(len ==4) {
+	        	array[2]= "xxxx";
+	        }
+	        
+	        }  
+	        }
+	        
+			for(String str : array){
+				System.out.print(str);
+			}
+	   }
+
+       
