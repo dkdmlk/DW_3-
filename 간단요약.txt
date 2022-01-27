@@ -42,6 +42,8 @@ JAVA
 while(true) /break           // while 는 진실일경우 실행되며 아닐경우 무한반복 break 는 break 에 정해진 숫자에 반복을 정지       
 int 배열[] = {숫자,숫자};     //변수 배열에 숫자를 담다 012~... 0부터
  
+Arrays.sort() 배열을 정렬해준다.
+
 메소드
  <접근지정자> <리턴타입> <메소드이름> <인자값>
    public      int        
