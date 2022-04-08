@@ -27,7 +27,7 @@ public static void main(String[] args) {
 				++count;
 			}
 		}
-/*		for(int i=0;i<list.size();++i) {
+		/*	for(int i=0;i<list.size();++i) {
 			String value2 = list.get(i);
 			if(value2.equals("곱창 파스타")) {
 				++count;
@@ -181,7 +181,8 @@ import java.util.ArrayList;
 public class EmpMain {
 	
 	//문제1메소드
-	public static ArrayList<EmpVo> getEmpList(ArrayList<EmpVo> list){//EmpVo를담고있는 ArrayList를 파라미터로 받고 있다.
+	public static ArrayList<EmpVo> getEmpList(ArrayList<EmpVo> list){
+		//EmpVo를담고있는 ArrayList를 파라미터로 받고 있다.
 		for(int i=0; i<list.size();++i) {
 			System.out.println("문제 1 메소드 : " +list.get(i).empno+" "+list.get(i).ename);
 		}
@@ -213,7 +214,7 @@ public class EmpMain {
 		list.add(new EmpVo(7934,null,"CLERK","1982-01-23",1300,10,0));
 		//일반 for
 		//1. 모든 사원 번호, 이름 출력
-		getEmpList(list);
+		getEmpList(list);//모든 사원 번호,이름 출력 메소드호출
 		
 		for(int i=0; i<list.size();++i) {
 			System.out.println("문제 1 : " +list.get(i).empno+" "+list.get(i).ename);
@@ -317,10 +318,10 @@ public class EmpMain {
 			System.out.println("문제B-5. 남은번호 "+list.get(i).deptno+" "+list.get(i).empno+" "+list.get(i).ename);
 		}
 		
-//		//for-each
-//		for(EmpVo vo: list) {
-//			
-//		}
+		//for-each 사용할경우
+		//for(EmpVo vo: list) {
+	
+		//}
 	}
 
 }
