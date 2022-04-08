@@ -1,3 +1,4 @@
+# 기본 사용법
 ~~~java
 public static void main(String[] args) {
 		//ArrayList<String> list//ctrl+shift+o=impot선언
@@ -109,7 +110,7 @@ public class ArrayList_Study2 {
 	}
 }
 ~~~
-
+# Emp테이블로 예시
 ~~~java
 public class EmpVo {
 	int empno;//사원번호
