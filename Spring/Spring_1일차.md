@@ -59,7 +59,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class MainController {
 	@GetMapping("/index")
 	public String call() { // index라는 주소를 요청하면 call()메소드를 실행~
-		String word = "강인석 Hello World!";
+		String word = "Hello World!";
 		return word;
 	}
 	@GetMapping("/sum")
