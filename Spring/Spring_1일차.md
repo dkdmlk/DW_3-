@@ -35,11 +35,11 @@ Java로 다양한 어플리케이션(웹 or 앱)을 만들기 위한 *틀(플레
 ## ***이클립스 or Sts 설정 (IDE)
 1. 한글 설정
 > - window -> Preferences ->encoding검색->General(Workspace 선택)->Text file encoding -> other -> UTF-8
-
+2. 프레임워크생성
 + https://start.spring.io/
 
 (약속) -> 패키지만들기(3개) -> 첫번재이름.두번재이름.3번재이름(com.naver.www) ex)com.회사이름.프로젝트명
-1. 첫번 째 패키지: www,io.kr 등등
+1. 첫번 째 패키지: www.io.kr 등등
 2. 두번 째 패키지 : 회사이름
 3. 세번 째 패키지 : 프로젝트명
 
@@ -74,22 +74,14 @@ public class MainController {
 		return array;
 	}
 }
-
 ~~~
+
 ## 실시간 main 
 -> devtools gradle
 
 compileOnly("org.springframework.boot:spring-boot-devtools")
 
 -> build.gradle 오른쪽클릭 gradle -> 다운로드
-
-## @
-+ @RestController: url 요청
-+ @GetMapping : 주소찾기 ex)localhost(ip):8080(포트번호)/index(getMapping으로 찾을 주소)
-+ @Data //Getter, Setter or Data : getter,setter 함수를 자동으로 만들어 줌
->+ Getter
->+ Setter
-
 
 ## 이클립스에서 인식을 못하는 프로그램
 + http://projectlombok.org/p2
