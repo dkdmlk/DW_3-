@@ -86,3 +86,17 @@ compileOnly("org.springframework.boot:spring-boot-devtools")
 ## 이클립스에서 인식을 못하는 프로그램
 + http://projectlombok.org/p2
 Help - > Install -> http://projectlombok.org/p2 입력
+
+# * https://start.spring.io/ (스프링만들때)추가할떄 좋은거
+## 1.lombok
+Lombok이란 어노테이션 기반으로 코드를 자동완성 해주는 라이브러리이다.
+
+Lombok을 이용하면 Getter, Setter, Equlas, ToString 등과 다양한 방면의 코드를 자동완성 시킬 수 있다.
+
+만약 위의 Store에서 생성자도 필요하고, toString 함수도 Override 해야하는 등 추가적인 작업이 필요하다면 1개의 VO 클래스만 해도 상당히 길어지고, 코드의 가독성은 떨어지는 등의 단점이 있다. 
+
+만약 위의 클래스에 Lombok을 적용한다면 아래와 같이 단순화시킬 수 있다.
+
+출처: https://mangkyu.tistory.com/78 [MangKyu's Diary]
+
+## 2.devtools
