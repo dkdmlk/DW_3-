@@ -32,13 +32,13 @@ Java로 다양한 어플리케이션(웹 or 앱)을 만들기 위한 *틀(플레
 + c -> asp
 + java -> spring
 ## 시작
-import -> gradle - > 폴더선택 -> F
+import -> gradle - > 폴더선택 -> setting.gradle 이름수정 -> 이클립스 DW 오른쪽클릭 -> gradle - > Refresh
 ## ***이클립스 or Sts 설정 (IDE)
 1. 한글 설정
 > - window -> Preferences ->encoding검색->General(Workspace 선택)->Text file encoding -> other -> UTF-8
 2. 프레임워크생성
 + https://start.spring.io/
-
+>  + Spring web 및 그레드
 (약속) -> 패키지만들기(3개) -> 첫번재이름.두번재이름.3번재이름(com.naver.www) ex)com.회사이름.프로젝트명
 1. 첫번 째 패키지: www.io.kr 등등
 2. 두번 째 패키지 : 회사이름
