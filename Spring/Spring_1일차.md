@@ -31,7 +31,8 @@ Java로 다양한 어플리케이션(웹 or 앱)을 만들기 위한 *틀(플레
 + python -> flask, 장고
 + c -> asp
 + java -> spring
-
+## 시작
+import -> gradle - > 폴더선택 -> F
 ## ***이클립스 or Sts 설정 (IDE)
 1. 한글 설정
 > - window -> Preferences ->encoding검색->General(Workspace 선택)->Text file encoding -> other -> UTF-8
