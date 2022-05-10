@@ -18,10 +18,10 @@ GET, POST, DELETE, PATCH (HTTP의 메소드 가능);
 - 중요한 정보를 보내거나,데이터를 많이 보낼 때 post를 사용한다.
 
 CRUD
-- C: create(insert)
-- R: read(select)
-- U: Update
-- D: Delete
+- C: create(insert) -Post
+- R: read(select) -Get
+- U: Update -Patch
+- D: Delete -Delete
 
 ### @Transactional(rollbackFor = {Exception.class})
 - 오류가 날시 그전 커밋으로 롤백해줌.
