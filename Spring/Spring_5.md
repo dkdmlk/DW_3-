@@ -42,6 +42,17 @@
 	public String calltier(@RequestParam("region") String region,@RequestParam("name") String name) {
 		return region + ", " + name;
 	}
+
+	//board?page=1&pageSize=10&writer=강인석
+	//게시판의 페이지 행렬의수 작성자
+	@GetMapping("/board")
+	public int callBoard(@RequestParam("page")int page,
+	@RequestParam("pageSize")int pageSize,@RequestParam("writer") String writer) {
+		System.out.println("현재 페이지는 : "+page);
+		System.out.println("한 페이지에 보여주는 row 수는 : "+pageSize);
+		System.out.println("작성자는 : "+ writer);
+		return 0;
+	}
 ~~~
 
 1. emp 에서 없는 부서번호를 찾아서 해당 부서 번호를 insert 하기.
@@ -50,3 +61,37 @@
 2. 급여가 3000이상인 사원만 삭제 @DeleteMapping
 
 - Pk로 조회하는건 단일행
+
+## 이름이A로 시작하는사람 찾기
+~~~Xml
+<select id="selectEmpEname" resultType="EmpVO">
+		SELECT
+			*
+		FROM emp
+		WHERE ename LIKE CONCAT(#{ename}, '%')
+	</select>
+~~~
+~~~java
+	Mapper
+	public List<EmpVO> selectEmpEname(String search);
+
+	Service
+	public List<EmpVO> getEmpEname(String search){
+		List<EmpVO> list = EmpMapper.selectEmpEname(search);
+		int count=0; //인원수 구하기
+		for(int i=0;i<list.size();++i) {
+			if(list.get(i).getEname().substring(0,1).equals(search)) {
+				++count;
+			}
+		}
+		System.out.println("이름이 A인 사람 수는! : " +count+"명");
+		return list;
+	}
+
+	Controller
+	///emp/name?search=A  / search = {#{ename}, '%'} 첫글자가 대입된다
+	@GetMapping("/emp/name")
+	public List<EmpVO> callEmpEname(@RequestParam("search") String search){
+		return empHomeService.getEmpEname(search);
+	}
+~~~
