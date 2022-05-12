@@ -17,7 +17,7 @@ GET, POST, DELETE, PATCH (HTTP의 메소드 가능);
 
 - 중요한 정보를 보내거나,데이터를 많이 보낼 때 post를 사용한다.
 
-CRUD
+## CRUD 작업
 - C: create(insert) -Post
 - R: read(select) -Get
 - U: Update -Patch
