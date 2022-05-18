@@ -50,6 +50,8 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
+WebSecurityCongfig class
+
 @Configuration
 @EnableWebSecurity
 public class WebSecurityCongfig extends WebSecurityConfigurerAdapter{
@@ -64,7 +66,10 @@ public class WebSecurityCongfig extends WebSecurityConfigurerAdapter{
 	}
 }
 
-Service
+Service class
+
+@Autowired
+	private PasswordEncoder passwordEncoder;
 //학생 생성
 	@Transactional(rollbackFor = Exception.class) 
 	public int setStudents(StudentsVO VO) {
