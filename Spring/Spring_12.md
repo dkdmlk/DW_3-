@@ -34,3 +34,26 @@ HTTP <- 정보를 유지하는 기능X
 세션은 웹서버에 저장
 - 세션은 백엔드(java)에 저장
 >>- 보안 높음
+
+# root
+root란 프로그래밍에서 최고 권한을 의미
+
+root 권한을 가져서 데이터베이스 생성, 삭제 테이블 생성,삭제가 가능했음.
+
+대부분 회사에서 DML(SELECT, UPDATE, INSERT, DELETE)만 가능한 계정을 줌 
+
+~~~sql
+-- 컬럼을 추가,수정,삭제하고 싶을 때 사용
+ alter table board add column cnt integer(4) default 0;
+
+-- root 계정이 계정을 생성함
+-- '%' 모든 IP허용
+create user (id)@'%' identified by '123';
+
+-- grant로 권한 부여
+-- on 데이터베이스이름.테이블이름(dw.*)
+grant select ,insert ,update on dw.* to inseok@'%';
+~~~
+
+# 프로젝트때 DB공유
+Edit 계정 사용할 private 아이피 -> 만든 계정으로 로그인
