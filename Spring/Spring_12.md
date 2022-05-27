@@ -57,3 +57,21 @@ grant select ,insert ,update on dw.* to inseok@'%';
 
 # 프로젝트때 DB공유
 Edit 계정 사용할 private 아이피 -> 만든 계정으로 로그인
+
+- private IP
+
+같은 네트워크에 있는 private IP끼리는 public IP 몰라도 통신 가능
+
+- public IP
+
+다른 네트워크에 있는 private ip랑 통신할때는 public IP 필요
+
+>- server : 서비스제공
+>>- (DB서버,웹서버)
+>- 포트번호(PK) : 서비스 식별 번호
+>>- 포트번호 범위 : 0 ~ 65535 (추천커스텀 포트번호 : 3000~9999)
+
+## 키보드 동작 방식
+1. 키보드를 누를 때 -> keydown
+2. 누른 키를 뗄 때 -> key up
+3. 키보드를 계속 누르고 있을 때 -> keypress
