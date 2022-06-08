@@ -1,0 +1,24 @@
+1.web.xml
+2. 서블릿컨테이너
+
+프레임워크 Spring
+개발언어 java
+db mysql
+build tool gradle
+
+Spring
+-Spring
+	--  web.xml(Spring은 main함수가 web.xml)
+	-- 서블릿컨테이너 
+-Spring egov 
+-Spring boot 
+
+톰캣을 설치해야함
+:8080 -> 서버가 오픈했단걸 의미
+톰캣은 웹 서버
+원래는 Spring하고 tomcat을 설치해야 실행 됨.
+Spring boot는 tomcat 설치할 필요 없이 내장 시킴.
+
+컨테이너(담다)
+서블릿 컨테이너 : 내가 만든 java 어플리케이션을 컨테이너에 담다.
+서블릿 컨테이너? 톰캣에 있음
