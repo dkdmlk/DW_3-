@@ -35,3 +35,15 @@ server.servlet.session.timeout=30
 DB -> mapper -> Service -> controller(JSP)      -> title name -> WEB
                         -> RestController(ajax) -> JSON -> App(직접DB연결불가하기 떄문에 백엔드 서버사용) & WEB
 ~~~
+
+## redirect
+1. 고객이 고객센터로 전화(042-1234)
+2. 고객이 주문환불하고 싶다요청!
+3. 상담원은 고객에게 다음과 같이 이야기함.
+>+ "고객님 해당 문의사항은 042-1234 아니라 042-123으로 다시 문의 해주시겠어요?"
+
+## forward
+1. 고객이 고객센터로 전화(042-1234)
+2. 고객이 주문환불하고 싶다요청!
+3. 상담원이 주문환불 하는 방법을 알아낸 후 문의사항을 처리함.
+
