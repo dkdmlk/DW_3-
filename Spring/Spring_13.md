@@ -30,3 +30,8 @@ application.properties
 ->
 server.servlet.session.timeout=30
 ~~~
+
+~~~
+DB -> mapper -> Service -> controller(JSP)      -> title name -> WEB
+                        -> RestController(ajax) -> JSON -> App(직접DB연결불가하기 떄문에 백엔드 서버사용) & WEB
+~~~
