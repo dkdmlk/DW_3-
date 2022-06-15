@@ -27,7 +27,7 @@ Ubuntu ROOT 계정 만들기
 1. sudo passwd root (root 비밀번호 초기 설정)
 2. su - (root 로그인)
 
-톰캣 설치
+Ubuntu 컴퓨터에 톰캣 설치
 1. wget https://downloads.apache.org/tomcat/tomcat-9/v9.0.64/bin/apache-tomcat-9.0.64.tar.gz
 2. tar xf apache-tomcat-9.0.64.tar.gz
 3. mv apache-tomcat-9.0.64 tomcat (폴더명 수정)
