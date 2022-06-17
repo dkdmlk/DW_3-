@@ -32,6 +32,65 @@ Ubuntu 컴퓨터에 톰캣 설치
 2. tar xf apache-tomcat-9.0.64.tar.gz
 3. mv apache-tomcat-9.0.64 tomcat (폴더명 수정)
 4. sh startup.sh(톰캣 실행 bin폴더 들어가야 함)
+~~~
+*** System restart required ***
+Last login: Wed Jun 15 02:28:55 2022 from 115.94.162.198
+ubuntu@ip-172-31-42-132:~$ clear
+ubuntu@ip-172-31-42-132:~$ pwd
+/home/ubuntu
+ubuntu@ip-172-31-42-132:~$ ls
+ROOT.war
+ubuntu@ip-172-31-42-132:~$ su -
+Password: 
+root@ip-172-31-42-132:~# pwd
+/root
+root@ip-172-31-42-132:~# cd /home/ubuntu/
+root@ip-172-31-42-132:/home/ubuntu# ls
+ROOT.war
+root@ip-172-31-42-132:/home/ubuntu# cd ..
+root@ip-172-31-42-132:/home# clear
+root@ip-172-31-42-132:/home# ls
+apache-tomcat-9.0.64.tar.gz  tomcat  ubuntu
+root@ip-172-31-42-132:/home# cd ubuntu/
+root@ip-172-31-42-132:/home/ubuntu# ls
+ROOT.war
+root@ip-172-31-42-132:/home/ubuntu# cd ..
+root@ip-172-31-42-132:/home# cd ubuntu/
+root@ip-172-31-42-132:/home/ubuntu# ls
+ROOT.war
+root@ip-172-31-42-132:/home/ubuntu# cd ..
+root@ip-172-31-42-132:/home# ls
+apache-tomcat-9.0.64.tar.gz  tomcat  ubuntu
+root@ip-172-31-42-132:/home# cd tomcat/
+root@ip-172-31-42-132:/home/tomcat# ls
+BUILDING.txt     LICENSE  README.md      RUNNING.txt  conf  logs  webapps
+CONTRIBUTING.md  NOTICE   RELEASE-NOTES  bin          lib   temp  work
+root@ip-172-31-42-132:/home/tomcat# cd webapps
+root@ip-172-31-42-132:/home/tomcat/webapps# ls
+ROOT  docs  examples  host-manager  manager
+root@ip-172-31-42-132:/home/tomcat/webapps# rm -rf *
+root@ip-172-31-42-132:/home/tomcat/webapps# ls
+root@ip-172-31-42-132:/home/tomcat/webapps# cd home
+-su: cd: home: No such file or directory
+root@ip-172-31-42-132:/home/tomcat/webapps# cd ..
+root@ip-172-31-42-132:/home/tomcat# cd ..
+root@ip-172-31-42-132:/home# ls
+apache-tomcat-9.0.64.tar.gz  tomcat  ubuntu
+root@ip-172-31-42-132:/home# cd ubuntu/
+root@ip-172-31-42-132:/home/ubuntu# ls
+ROOT.war
+root@ip-172-31-42-132:/home/ubuntu# mv ROOT.war /home/tomcat/
+BUILDING.txt     README.md        conf/            webapps/
+CONTRIBUTING.md  RELEASE-NOTES    lib/             work/
+LICENSE          RUNNING.txt      logs/            
+NOTICE           bin/             temp/            
+root@ip-172-31-42-132:/home/ubuntu# mv ROOT.war /home/tomcat/webapps/
+root@ip-172-31-42-132:/home/ubuntu# ls
+root@ip-172-31-42-132:/home/ubuntu# cd /home/tomcat/webapps/
+root@ip-172-31-42-132:/home/tomcat/webapps# ls
+ROOT  ROOT.war
+root@ip-172-31-42-132:/home/tomcat/webapps# ^C
+~~~
 
 포트 확인
 1. netstat -tnlp
