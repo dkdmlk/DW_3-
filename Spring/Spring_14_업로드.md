@@ -80,3 +80,13 @@ root@ip-172-31-42-132:/home/ubuntu# cd /home/tomcat/webapps/
 root@ip-172-31-42-132:/home/tomcat/webapps# ls                                   //잘옮겨졋는지확인
 ROOT  ROOT.war
 ~~~
+
+## 배포?
+EC2->
+0. 운영체제?
+1. 리눅스 명령어
+2. 배포경로?
+3. 프로그램?
+
+- aws-빈즈톡 : 쉬운배포(마우스)
+- aws-람다 : 코드에집중(배포 불필요) 
