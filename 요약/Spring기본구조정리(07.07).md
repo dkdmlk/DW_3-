@@ -302,6 +302,8 @@ public int insert(@VO vo){
 	return service.insert(vo);
 }//ajax json작성후 하면끝~(or post맨 주소 json작성)
 //등록 버튼이 있을시 & 가입input있을시.
+
+.js
 #("#인설트버튼").click(function() {
 	var 컬럼1 = #("#인설트버튼").val();
 	var 컬럼2 =	#("#인설트버튼").val();
@@ -365,6 +367,7 @@ public int update(@PathVariable("PK컬럼") int PK컬럼,
 	return service.update(vo);
 }
 
+.js
 $("#apartmentsUpdate").click(function (){
 			var PK = $("#PkHidden").val();//input hidden의값을 가져온다.
 			var cur1 = $('#cur1').val();
@@ -439,7 +442,7 @@ public int calldeleted(@PathVariable("Pk")int Pk) {
 public int calldeleted(@PathVariable("Pk")int Pk) {
 		return service.getdelete(Pk);
 }
-
+.js
 //게시물 삭제
 $("#contentDelete").click(function() {
 	//1. 게시판 번호 확인
