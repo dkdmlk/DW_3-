@@ -1,3 +1,8 @@
+# 목차
+
+1. [src/main/java](#1spring-java-구조)
+2. [CRUD](#2-crud-select-insertupdate-delete조회-추가-업데이트-패치)
+
 # 1.Spring java 구조
 
 ## 1-1. src/main/java
@@ -42,8 +47,9 @@ webapp
 
 ## 1-5 Project 종류
 
+### 1-5-1. gradle
+
 ```java
-1-5-1. gradle
 -> bulid.gradle
 //구조
 plugins {//
@@ -79,8 +85,11 @@ dependencies { //사용하기위한 툴(저장받을 프로그램)
 	implementation 'javax.json:javax.json-api:1.1.2'
 	implementation 'org.glassfish:javax.json:1.1'
 }
-1-5-2. maven
-~~~java
+```
+
+### 1-5-2. maven
+
+```java
 maven
 -> pom.xml
 //구조
@@ -133,7 +142,7 @@ maven
 	</dependencies>
 ```
 
-# 2.CRUD(select, insert,update ,delete)조회 추가 업데이트 패치
+# 2. CRUD (select, insert,update ,delete)조회 추가 업데이트 패치
 
 1. select
    컬럼 한줄을 찾을때 사용
