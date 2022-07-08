@@ -480,3 +480,11 @@ $("#contentDelete").click(function() {
 	}//config
 });//삭제함수 끝
 ```
+
+# 3. <jsp:include>
+
+.jsp파일의 위치경로만 쓰면 끝
+
+```java
+<jsp:include page="include/header.jsp"></jsp:include>
+```
