@@ -343,3 +343,66 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
 }
 
 ~~~
+
+
+```java
+@PatchMapping("/member/update")
+@ResponseBody
+public int callUpdateUser(@RequestBody UsersVO vo) { //업데이트 컬럼
+	return userService.getUpdateUser(vo);
+}
+
+
+@Transactional(rollbackFor = {Exception.class})
+public int getUpdateUser(UsersVO vo) {//업데이트로 바뀐 비밀번호 암호화
+	String password = vo.getUserPassword();
+	password = passwordEncoder.encode(password);
+	vo.setUserPassword(password);
+	return usersMapper.updateUser(vo);
+}
+
+```
+
+
+```java
+.Controller -> member
+Authentication auth = SecurityContextHolder.getContext().getAuthentication();// security에서 로그인한 사람에 정보를 체크 후 불러옴
+UsersVO vo = (UsersVO) auth.getPrincipal(); // UsersVO 사용자 권한정보가 저장된 vo
+List<AuthorityVO> list = userService.getAuth(vo.getUserId());// 사용자 권한 조회
+vo.setAuthorities(list);// 사용자 권한 vo에 set
+
+```
+
+```java
+권한
+@Override
+public UserDetails loadUserByUsername(String userId) throws UsernameNotFoundException {
+	UsersVO userVO  = usersMapper.selectUserInfo(userId);
+	if(userVO == null) throw new UsernameNotFoundException("User Not Found"+userId); //유저의 정보가없다면 발생하는 이벤트
+
+	return userVO;
+}
+
+```
+
+```java
+권한컨트롤러
+@PostMapping("/join")
+	public @ResponseBody int callJoin(@RequestBody UsersVO usersVO) { //유저의 번호를주고 유저 정보를 받는다
+		return userService.setUser(usersVO);
+}
+
+@Transactional(rollbackFor = Exception.class)
+	public int setUser(UsersVO usersVO) { //비밀번호를 암호화해서 저장하는 메소드(service)
+		String password = usersVO.getUserPassword(); // 파라미터값 비밀번호 get
+		password = passwordEncoder.encode(password); // 암호화
+		usersVO.setUserPassword(password); // 암호화된 패스워드 set
+		int rows = usersMapper.insertUser(usersVO);
+		if(rows > 0) {//유저 인서트 시 권한 rootRoleId에 너어준다
+			int rootRoleId = 2;
+			usersMapper.insertAuth(usersVO.getUserNo(), rootRoleId);
+		}
+		return rows;
+	}
+
+```
