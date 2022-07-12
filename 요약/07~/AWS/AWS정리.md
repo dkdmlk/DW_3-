@@ -121,6 +121,9 @@ X매니저 등 접속프로그램을 이용하여 설치
    > - ex) rm -rf _ (폴더파일 모두(_) 강제(-rf)삭제)
 8. su - : 루트계정 접속
 9. sudo passwd root : root 비밀번호 초기 설정
+10. netstat -tnlp : 현재 사용하는 포트확인
+11. nohup java -jar hrk.war & : 파일 실행 서버가 유지되는한 계속켜진다.(배포)
+12. kill -9 (PID번호) : nohup으로 실행된 파일을 끉는다.
 
 ```
 *** System restart required ***
