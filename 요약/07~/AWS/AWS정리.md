@@ -83,7 +83,9 @@ Amazon Elastic Compute Cloud(Amazon EC2)는 안전하고 크기 조정이 가능
 - 탄력적IP(EIP) : 고정 public IP 만듬
   ubuntu는 apt라는 명령어를 사용 하요 프로그램을 다운로드 받는다
 
-* 자바 JDK 설치
+## EC2 war설치
+
+- 자바 JDK 설치
 
 1. sudo apt update
 2. sudo apt instaill
@@ -180,7 +182,91 @@ root@ip-172-31-42-132:/home/tomcat/webapps# ^C
 
 포트 확인
 
-1. netstat -tnlp
+## EC2 war설치(jar 형식으로 톰캣에다(분리하지 않는다)설치X
+
+배포(deploy)
+준비)이클립스,aws 로그인
+
+Spring boot 는 내장톰캣.
+
+스프링 배포 2가지
+배포
+1.war
+2.jar (Spring boot만 가능 이유:내장톰캣이 있기 때문에)
+
+war - w= web
+jar - j = jar
+
+스프링, 이고브 배포하는 방법 1가지
+
+1. war로 압축
+
+이번 포트 9090
+
+gradle task -> bootjar
+
+```
+ubuntu@ip-172-31-42-132:~$ clear
+ubuntu@ip-172-31-42-132:~$ su -
+Password:
+root@ip-172-31-42-132:~# ls
+snap
+root@ip-172-31-42-132:~# cd /home
+root@ip-172-31-42-132:/home# ls
+apache-tomcat-9.0.64.tar.gz  tomcat  ubuntu
+root@ip-172-31-42-132:/home# cd ubuntu/
+root@ip-172-31-42-132:/home/ubuntu# ls
+root@ip-172-31-42-132:/home/ubuntu# pwd
+/home/ubuntu
+
+(war 파일을 ubuntu에 설치)
+
+root@ip-172-31-42-132:/home/ubuntu# ls
+hrk.jar
+root@ip-172-31-42-132:/home/ubuntu# nohup java -jar hrk.war &        //실행
+[1] 13203
+root@ip-172-31-42-132:/home/ubuntu# nohup: ignoring input and appending output to 'nohup.out'
+root@ip-172-31-42-132:/home/ubuntu# ls
+hrk.jar  nohup.out
+root@ip-172-31-42-132:/home/ubuntu# netstat -tnlp
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      661/systemd-resolve
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      975/sshd
+tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      13081/sshd: ubuntu@
+tcp6       0      0 :::9090                 :::*                    LISTEN      13203/java          //***확인!
+tcp6       0      0 127.0.0.1:8005          :::*                    LISTEN      7271/java
+tcp6       0      0 :::8080                 :::*                    LISTEN      7271/java
+tcp6       0      0 :::22                   :::*                    LISTEN      975/sshd
+tcp6       0      0 ::1:6010                :::*                    LISTEN      13081/sshd: ubuntu@
+root@ip-172-31-42-132:/home/ubuntu#
+```
+
+## 실행이 안될경우!
+
+```
+root@ip-172-31-42-132:/home/ubuntu# netstat -tnlp
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      661/systemd-resolve
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      975/sshd
+tcp        0      0 127.0.0.1:6010          0.0.0.0:*               LISTEN      13081/sshd: ubuntu@
+tcp6       0      0 :::9090                 :::*                    LISTEN      13564/java
+tcp6       0      0 127.0.0.1:8005          :::*                    LISTEN      7271/java
+tcp6       0      0 :::8080                 :::*                    LISTEN      7271/java
+tcp6       0      0 :::22                   :::*                    LISTEN      975/sshd
+tcp6       0      0 ::1:6010                :::*                    LISTEN
+
+9090 의 PID 번호를 없앤다
+
+root@ip-172-31-42-132:/home/ubuntu# kill -9 13564 //9090포트 삭제!
+root@ip-172-31-42-132:/home/ubuntu# rm -rf * //ubuntu안에 있는 모든 파일 삭제
+root@ip-172-31-42-132:/home/ubuntu# ls // 폴더에 남아있나확인
+후 재설치!
+war파일 ubuntu에 설치 -> ubuntu에서 war 파일이 있을때 -> nohup java -jar hrk.war & 명령어로 설치 -> netstat -tnl로 확인! -> 실행되는지 확인
+
+```
+
+후실행
 
 # 빈스톡
 
